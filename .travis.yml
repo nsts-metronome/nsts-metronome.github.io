@@ -1,0 +1,14 @@
+language: node_js
+node_js: "7"
+install: npm i
+script: npm run build
+
+notifications:
+  email: false
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  repo: 'nsts-metronome/nsts-metronome.github.io'
+  on:
+    branch: master
